@@ -21,6 +21,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         // Dispose of any resources that can be recreated.
     }
 
+    //MARK: Action
     @IBAction func imagePickFromPhotoLib(_ sender: UIButton) {
         let imagePickerController = UIImagePickerController()
         // imagePickerController.allowsEditing = true
@@ -41,6 +42,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         present(imagePickerController, animated: true, completion: nil)
     }
     
+    //MARK: UIImagePickerDelegate
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
