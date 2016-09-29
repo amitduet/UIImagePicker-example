@@ -20,28 +20,38 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ikr-oQ-6eI"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-6p-gWk">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="112" id="rbR-Pf-sV6"/>
-                                </constraints>
                                 <state key="normal" title="Photo Library "/>
+                                <connections>
+                                    <action selector="imagePickFromPhotoLib:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WGY-YT-I20"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCZ-Jx-jkh">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="eWc-fH-p8o"/>
+                                </constraints>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="imagePickFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFQ-kN-SO9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ikr-oQ-6eI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0I9-Zg-Slp"/>
-                            <constraint firstItem="gC2-6p-gWk" firstAttribute="centerX" secondItem="Ikr-oQ-6eI" secondAttribute="centerX" id="7EF-w1-fgs"/>
-                            <constraint firstItem="gC2-6p-gWk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FgI-iK-G9M"/>
-                            <constraint firstItem="gC2-6p-gWk" firstAttribute="leading" secondItem="bCZ-Jx-jkh" secondAttribute="leading" id="Jnt-GN-fbd"/>
-                            <constraint firstItem="gC2-6p-gWk" firstAttribute="trailing" secondItem="bCZ-Jx-jkh" secondAttribute="trailing" id="O1r-vt-1er"/>
+                            <constraint firstItem="bCZ-Jx-jkh" firstAttribute="centerX" secondItem="Ikr-oQ-6eI" secondAttribute="centerX" id="Hts-X1-msH"/>
+                            <constraint firstItem="bCZ-Jx-jkh" firstAttribute="trailing" secondItem="gC2-6p-gWk" secondAttribute="trailing" id="RnH-hq-eVQ"/>
+                            <constraint firstItem="bCZ-Jx-jkh" firstAttribute="leading" secondItem="gC2-6p-gWk" secondAttribute="leading" id="Vfx-F6-9Ul"/>
+                            <constraint firstItem="bCZ-Jx-jkh" firstAttribute="top" secondItem="gC2-6p-gWk" secondAttribute="bottom" constant="8.5" id="b7g-J4-fHY"/>
                             <constraint firstItem="Ikr-oQ-6eI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="evQ-cI-eGE"/>
+                            <constraint firstItem="gC2-6p-gWk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="260" id="isf-hc-gB6"/>
                             <constraint firstItem="Ikr-oQ-6eI" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="jiG-8a-FGX"/>
                             <constraint firstItem="Ikr-oQ-6eI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nFA-ri-wmj"/>
                             <constraint firstItem="bCZ-Jx-jkh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zmL-uB-eDo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Ikr-oQ-6eI" id="3Bd-ib-tnM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
